@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.app-layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: red;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* HeaderSection */
+.global-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: blueviolet;
+    align-items: center;
+
+}
+.brand-section{
+    display: flex;
+    align-items: center;
+}
+.brand-section h2{
+    color:aliceblue
+}
+.search-container span{
+    width: 60%;
+}
+
+.header-section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
