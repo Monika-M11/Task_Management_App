@@ -1,57 +1,677 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="styles.css">
-     <script src="https://unpkg.com/lucide@latest"></script>
+
     <title>Task Management System</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-      <header class="global-header"> 
+
+    <!-- Global Header -->
+    <header class="global-header">
+
+        <!-- Logo and App Name -->
         <div class="brand-section">
-            <img src="" alt="logo">
-            <h2>Task Managenment App</h2>
+
+            <div class="logo-mark">
+                <i data-lucide="layout-dashboard"></i>
+            </div>
+
+            <h2>Task Management App</h2>
+
         </div>
+
+        <!-- Search, Notification and Profile -->
         <div class="header-section">
-             <div class="search-container">
-         <i data-lucide="search"></i>
-            <input type="text" >
+
+            <div class="search-container">
+                <i data-lucide="search"></i>
+                <input
+                    type="text"
+                    placeholder="Search tasks..."
+                    aria-label="Search tasks"
+                >
+            </div>
+
+            <button
+                class="notification-btn"
+                type="button"
+                aria-label="Notifications"
+            >
+                <i data-lucide="bell"></i>
+            </button>
+
+            <div class="profile-section">
+                <i data-lucide="user-round"></i>
+                <span>Admin</span>
+            </div>
+
         </div>
 
-         <button class="notification-btn" aria-label="Notifications">
-            <i data-lucide="bell"></i>
-        </button>
+    </header>
 
-         <div class="profile-section">
-           <i data-lucide="user-round"></i>
-            <span>Admin</span>
-        </div>
-
-        </div>
-      </header>
+    <!-- Application Layout -->
     <div class="app-layout">
-   
-            <aside class="sidebar">    </aside>
 
+        <!-- Sidebar -->
+    <aside class="sidebar">
 
-<main class="main-content">
-   
+    <!-- Navigation Menu -->
+    <div class="sidebar-navigation">
 
-   
+        <a href="#" class="sidebar-link active">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
 
+        <a href="#" class="sidebar-link">
+            <i data-lucide="folder"></i>
+            <span>Projects</span>
+        </a>
 
-    <section> </section>
-    <section> </section>
-    <section> </section>
+        <a href="#" class="sidebar-link">
+            <i data-lucide="list"></i>
+            <span>Tasks</span>
+        </a>
 
+        <a href="#" class="sidebar-link">
+            <i data-lucide="chart-no-axes-column"></i>
+            <span>Analytics</span>
+        </a>
 
-    </main>
+        <a href="#" class="sidebar-link">
+            <i data-lucide="users"></i>
+            <span>Team Members</span>
+        </a>
+
+        <a href="#" class="sidebar-link">
+            <i data-lucide="settings"></i>
+            <span>Settings</span>
+        </a>
+
     </div>
-    <script>
-    lucide.createIcons();
-</script>
-    
-</body>
 
+    <!-- Team Members Panel -->
+    <div class="sidebar-team">
+
+        <div class="team-heading">
+            <h4>TEAM MEMBERS</h4>
+            <button type="button">+ Add</button>
+        </div>
+
+        <div class="member-search">
+            <i data-lucide="search"></i>
+            <input type="text" placeholder="Search members...">
+        </div>
+
+        <div class="sidebar-member-list">
+
+            <div class="sidebar-member">
+                <input type="checkbox">
+                <div class="member-avatar">JS</div>
+                <div class="member-details">
+                    <h5>John Smith</h5>
+                    <p>EMP001 · Developer</p>
+                </div>
+            </div>
+
+            <div class="sidebar-member">
+                <input type="checkbox">
+                <div class="member-avatar">SK</div>
+                <div class="member-details">
+                    <h5>Sarah Khan</h5>
+                    <p>EMP002 · Designer</p>
+                </div>
+            </div>
+
+            <div class="sidebar-member">
+                <input type="checkbox">
+                <div class="member-avatar">MJ</div>
+                <div class="member-details">
+                    <h5>Mike Johnson</h5>
+                    <p>EMP003 · Developer</p>
+                </div>
+            </div>
+
+            <div class="sidebar-member">
+                <input type="checkbox">
+                <div class="member-avatar">PS</div>
+                <div class="member-details">
+                    <h5>Priya Sharma</h5>
+                    <p>EMP004 · QA Engineer</p>
+                </div>
+            </div>
+
+            <div class="sidebar-member">
+                <input type="checkbox">
+                <div class="member-avatar">DL</div>
+                <div class="member-details">
+                    <h5>David Lee</h5>
+                    <p>EMP005 · DevOps</p>
+                </div>
+            </div>
+
+            <div class="sidebar-member">
+                <input type="checkbox">
+                <div class="member-avatar">EW</div>
+                <div class="member-details">
+                    <h5>Emma Wilson</h5>
+                    <p>EMP006 · Product Owner</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+
+            <section class="content-section">
+                <div class="Welcome-text">
+                <h1>Welcome back, Admin!</h1>
+                <p>Here's what's happening with your workspace today.</p>
+                </div>
+            <div class="btn">
+                <button class="add-task" type="button">
+                <i data-lucide="plus"></i>
+                Create Task
+                </button>
+        </div>
+
+            </section>
+
+            <section class="stats-section">
+                <div class="stat-card">
+            <div class="stat-info">
+                <p>Total Projects</p>
+                <h2>12</h2>
+            </div>
+            <div class="stat-icon projects-icon">
+                <i data-lucide="folder-kanban"></i>
+            </div>
+        </div> 
+
+
+        <div class="stat-card">
+            <div class="stat-info">
+                <p>Total Tasks</p>
+                <h2>48</h2>
+            </div>
+            <div class="stat-icon tasks-icon">
+                <i data-lucide="list-checks"></i>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-info">
+                <p>Completed Tasks</p>
+                <h2>30</h2>
+            </div>
+            <div class="stat-icon completed-icon">
+                <i data-lucide="check-circle"></i>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-info">
+                <p>Pending Tasks</p>
+                <h2>18</h2>
+            </div>
+            <div class="stat-icon pending-icon">
+                <i data-lucide="clock"></i>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-info">
+                <p>Overdue</p>
+                <h2>5</h2>
+            </div>
+            <div class="stat-icon due-icon">
+                <i data-lucide="triangle-alert"></i>
+            </div>
+        </div>
+
+            </section>
+
+            <section class="toolkit-section">
+                <div class = "task-filters">
+                    <div class="search-bar">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="search tasks..." aria-label="Search tasks" />
+                    </div>
+                </div>
+
+<div class="filter">
+                <div class="filter-group">
+                <select aria-label="Filter by project">
+                <option value="all">Project</option>
+                <option value="todo">Project 1</option>
+                <option value="in-progress">Project 2</option>
+                <option value="completed">Project 3</option>
+                </select>
+                </div>
+
+
+                <div class="filter-group">
+                <select aria-label="Filter by Priority">
+                <option value="all">Priority</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                </select>
+                </div>
+
+                <div class="filter-group">
+                <select aria-label="Filter by status">
+                <option value="all">Status</option>
+                <option value="high">To Do</option>
+                <option value="medium">In Progress</option>
+                <option value="low">Completed</option>
+                </select>
+                </div>
+
+                <button class="clear-btn">
+                    Clear
+                </button>
+                </div>
+
+            </section>
+
+
+<!-- -------------------------------- -->
+<!-- Task card -->
+<!-- -------------------------------- -->
+
+<section class="Tasks-section">
+
+    <!-- TO DO COLUMN -->
+    <div class="task-column-1">
+
+        <div class="column-header">
+            <div class="column-title">
+                <span class="status-dot todo-dot"></span>
+                <h3>To Do</h3>
+                <span class="task-total">2</span>
+            </div>
+
+            <button type="button" aria-label="Add task to To Do">
+                <i data-lucide="plus"></i>
+            </button>
+        </div>
+
+        <div class="task-cards">
+
+            <!-- Card 1 -->
+            <div class="board-task-card">
+                <h4>Create REST API</h4>
+                <p>Develop task management APIs</p>
+
+                <div class="card-details">
+                    <span class="priority-badge high">High</span>
+                    <span class="due-date">Nov 10</span>
+                </div>
+
+                <div class="card-footer">
+                    <span class="assignee">MK</span>
+                    <span>Mike</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="board-task-card">
+                <h4>Add authentication</h4>
+                <p>Implement user login</p>
+
+                <div class="card-details">
+                    <span class="priority-badge medium">Medium</span>
+                    <span class="due-date">Nov 15</span>
+                </div>
+
+                <div class="card-footer">
+                    <span class="assignee">JD</span>
+                    <span>John</span>
+                </div>
+            </div>
+
+
+ <div class="board-task-card">
+                <h4>Create Login Page</h4>
+                <p>Develop Login page and implement login logics</p>
+
+                <div class="card-details">
+                    <span class="priority-badge high">High</span>
+                    <span class="due-date">Nov 15</span>
+                </div>
+
+                <div class="card-footer">
+                    <span class="assignee">AN</span>
+                    <span>Anne</span>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- IN PROGRESS COLUMN -->
+    <div class="task-column-2">
+
+        <div class="column-header">
+            <div class="column-title">
+                <span class="status-dot progress-dot"></span>
+                <h3>In Progress</h3>
+                <span class="task-total">1</span>
+            </div>
+
+            <button type="button" aria-label="Add task to In Progress">
+                <i data-lucide="plus"></i>
+            </button>
+        </div>
+
+        <div class="task-cards">
+
+            <div class="board-task-card">
+                <h4>Build dashboard UI</h4>
+                <p>Develop dashboard components</p>
+
+                <div class="card-details">
+                    <span class="priority-badge medium">Medium</span>
+                    <span class="due-date">Nov 08</span>
+                </div>
+
+                <div class="card-footer">
+                    <span class="assignee">SA</span>
+                    <span>Sarah</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- COMPLETED COLUMN -->
+    <div class="task-column-3">
+
+        <div class="column-header">
+            <div class="column-title">
+                <span class="status-dot completed-dot"></span>
+                <h3>Completed</h3>
+                <span class="task-total">1</span>
+            </div>
+
+            <button type="button" aria-label="Add task to Completed">
+                <i data-lucide="plus"></i>
+            </button>
+        </div>
+
+        <div class="task-cards">
+
+            <div class="board-task-card">
+                <h4>Design login page</h4>
+                <p>Create login page UI design</p>
+
+                <div class="card-details">
+                    <span class="priority-badge high">High</span>
+                    <span class="due-date">Nov 05</span>
+                </div>
+
+                <div class="card-footer">
+                    <span class="assignee">JD</span>
+                    <span>John</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+    </main>
+
+</div>
+
+
+</section>
+
+<section class="analytics-section">
+
+    <div class="analytics-header">
+
+        <div class="menus">
+
+            <div class="menu-item active">
+                <i data-lucide="chart-no-axes-column"></i>
+                <a href="#">Analytics</a>
+            </div>
+
+            <div class="menu-item">
+                <i data-lucide="chart-pie"></i>
+                <a href="#">Overview</a>
+            </div>
+
+            <div class="menu-item">
+                <i data-lucide="file-chart-line"></i>
+                <a href="#">Reports</a>
+            </div>
+
+        </div>
+
+        <div class="filter-bar">
+            <select aria-label="Filter by days">
+                <option value="30">Last 30 days</option>
+                <option value="60">Last 2 months</option>
+                <option value="90">Last 3 months</option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <div class="analytics-charts">
+
+    <!-- Pie chart container -->
+    <div class="chart-card">
+        <div class="chart-header">
+            <h3>Task Status Distribution</h3>
+            <p>Overview of task statuses</p>
+        </div>
+
+        <div class="pie-chart">
+    <div class="pie-visual">
+        <div class="pie-circle"></div>
+    </div>
+
+    <div class="chart-legend">
+        <div><span class="legend-dot todo-color"></span>To Do <strong>12</strong></div>
+        <div><span class="legend-dot progress-color"></span>In Progress <strong>8</strong></div>
+        <div><span class="legend-dot completed-color"></span>Completed <strong>28</strong></div>
+    </div>
+</div>
+    </div>
+
+    <!-- Bar chart container -->
+    <div class="chart-card">
+        <div class="chart-header">
+            <h3>Tasks by Priority</h3>
+            <p>Distribution of tasks by priority</p>
+        </div>
+
+        <div class="bar-chart">
+
+    <div class="bar-item">
+        <div class="bar-value">12</div>
+        <div class="bar-track">
+            <div class="bar-fill high-bar"></div>
+        </div>
+        <span>High</span>
+    </div>
+
+    <div class="bar-item">
+        <div class="bar-value">20</div>
+        <div class="bar-track">
+            <div class="bar-fill medium-bar"></div>
+        </div>
+        <span>Medium</span>
+    </div>
+
+    <div class="bar-item">
+        <div class="bar-value">16</div>
+        <div class="bar-track">
+            <div class="bar-fill low-bar"></div>
+        </div>
+        <span>Low</span>
+    </div>
+
+</div>
+
+
+
+    </div>
+
+</div>
+
+<div class="analytics-bottom">
+
+    <!-- Team Member Analytics -->
+    <div class="team-analytics chart-card">
+
+        <div class="chart-header">
+            <h3>Team Member Analytics</h3>
+            <p>Task performance by team members</p>
+        </div>
+
+       <div class="team-table-container">
+    <table class="team-table">
+
+        <thead>
+            <tr>
+                <th>Team Member</th>
+                <th>Assigned</th>
+                <th>Completed</th>
+                <th>Pending</th>
+                <th>Overdue</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <div class="table-member">
+                        <span class="member-avatar">MK</span>
+                        <span>Mike</span>
+                    </div>
+                </td>
+                <td>12</td>
+                <td>8</td>
+                <td>3</td>
+                <td class="overdue-count">1</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="table-member">
+                        <span class="member-avatar">SJ</span>
+                        <span>Sarah</span>
+                    </div>
+                </td>
+                <td>10</td>
+                <td>7</td>
+                <td>2</td>
+                <td class="overdue-count">1</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="table-member">
+                        <span class="member-avatar">JD</span>
+                        <span>John</span>
+                    </div>
+                </td>
+                <td>8</td>
+                <td>5</td>
+                <td>2</td>
+                <td class="overdue-count">1</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="recent-activity chart-card">
+
+        <div class="chart-header">
+            <h3>Recent Activity</h3>
+            <p>Latest team updates</p>
+        </div>
+
+        <div class="activity-list">
+
+            <div class="activity-item">
+                <span class="activity-icon">
+                    <i data-lucide="plus-circle"></i>
+                </span>
+                <div>
+                    <p><strong>Mike</strong> created a new task</p>
+                    <span>API Development · 10 min ago</span>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <span class="activity-icon">
+                    <i data-lucide="check-circle"></i>
+                </span>
+                <div>
+                    <p><strong>Sarah</strong> completed a task</p>
+                    <span>Login Page Design · 30 min ago</span>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <span class="activity-icon">
+                    <i data-lucide="pencil"></i>
+                </span>
+                <div>
+                    <p><strong>John</strong> updated a task</p>
+                    <span>Database Setup · 1 hour ago</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+            
+
+      
+
+    
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
 </html>
